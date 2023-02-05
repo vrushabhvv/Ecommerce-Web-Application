@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    	<session-factory>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/mycart</property>
+		<property name="connection.username">vrushabh</property>
+		<property name="connection.password">Vrushabh@534</property>
+		<property name="diaLect">org.hibernate.dialect.MYSQL8Dialect</property>
+		<property name="hbm2ddl.auto">update</property><!-- it create table for first time,if you want to create for everytime you can alter value. if we write create it will drop and create another table if same table exist-->
+		<property name="show_sql">true</property><!-- it show query which has hibernate has created-->
+		
+                
+                <mapping class="com.kodnest.mycart.entities.User"/>
+                <mapping class="com.kodnest.mycart.entities.Category"/>
+                <mapping class="com.kodnest.mycart.entities.Product"/>
+	</session-factory>
+
+</hibernate-configuration>
